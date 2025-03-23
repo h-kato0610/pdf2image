@@ -4,7 +4,7 @@
 * とりあえずjpeg専用
 
 * 以下実行方法
-```python
+```bash
 python pdf2img hoge.pdf
 ```
 * outputディレクトリが生成されjpegが保存されている
