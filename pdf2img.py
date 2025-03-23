@@ -4,7 +4,7 @@ from pdf2image import convert_from_path
 
 # Is input PDF name?
 try:
-    pdf_name = sys.argv[1]
+    pdf_file = sys.argv[1]
 except:
     print('''
         error: PDF file name not nound
@@ -13,8 +13,12 @@ except:
     ''')
     sys.exit(1)
 
-pdf_path = Path(f'./{pdf_name}')
+pdf_path = Path(f'./{pdf_file}')
 img_path = Path('./output')
+
+if pdf_path.exists() == False:
+    print(f'error: {pdf_file} is not found')
+    sys.exit(1)
 
 # Make output dir
 if img_path.exists() == False:
