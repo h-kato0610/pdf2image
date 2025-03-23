@@ -7,7 +7,7 @@ try:
     pdf_name = sys.argv[1]
 except:
     print('''
-        error: PDFfile NameNotFound
+        error: PDF file name not nound
         ex. 
         python pdf2img.py hoge.pdf
     ''')
